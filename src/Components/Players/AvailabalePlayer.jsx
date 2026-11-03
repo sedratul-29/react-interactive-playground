@@ -1,4 +1,4 @@
-import Card from "../UI/card";
+import Card from "../UI/Card";
 
 const AvailabalePlayer = ({ players , handleSelectedPlayers}) => {
     // console.log(players)
