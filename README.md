@@ -1,5 +1,9 @@
 # BPL Dream 11 🏏
 
+🚀 Live Demo
+
+[View Live Project →](https://bpl-pro-dream-11.netlify.app/)
+
 A React-based cricket player selection application built as a hands-on learning project to practice core React concepts and interactive UI development.
 
 ## About the Project
