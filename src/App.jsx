@@ -1,6 +1,7 @@
 import Navbar from './Components/Navbar/Navbar'
 import Banner from './Components/Banner/Banner'
 import Players from './Components/Players/Players'
+import Footer from './Components/Footer/Footer'
 import './App.css'
 import { createContext, Suspense, useState } from 'react'
 
@@ -21,6 +22,7 @@ function App() {
           <Players playersPromise={playersPromise}></Players>
         </Suspense>
       </div>
+      <Footer></Footer>
     </CoinContext.Provider>
   )
 }
