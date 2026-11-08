@@ -32,4 +32,4 @@ const SelectedPlayers = ({ selectedPlayers, setSelectedPlayers, coin, setCoin })
     );
 };
 
-export default SelectedPlayers;
+export default SelectedPlayers;``

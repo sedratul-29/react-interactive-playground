@@ -14,7 +14,14 @@ const Players = ({ playersPromise }) => {
 
     const [selectedPlayers, setSelectedPlayers] = useState([]);
     const handleSelectedPlayers = (player) => {
-        const newSelectedPlayers = [...selectedPlayers,player];
+        const isExist = selectedPlayers.some(p =>
+            p.playerName === player.playerName
+        )
+        if(isExist){
+            alert('Already Selected!');
+            return
+        }
+        const newSelectedPlayers = [...selectedPlayers, player];
         setSelectedPlayers(newSelectedPlayers);
     }
 
@@ -32,15 +39,15 @@ const Players = ({ playersPromise }) => {
                 </div>
             </div>
             {
-                selected === "Available" ? 
-                <AvailabalePlayer players={players} 
-                handleSelectedPlayers={handleSelectedPlayers} /> : 
-                <SelectedPlayers 
-                selectedPlayers={selectedPlayers} 
-                setSelectedPlayers={setSelectedPlayers}
-                coin={coin}
-                setCoin={setCoin}
-                ></SelectedPlayers>
+                selected === "Available" ?
+                    <AvailabalePlayer players={players}
+                        handleSelectedPlayers={handleSelectedPlayers} /> :
+                    <SelectedPlayers
+                        selectedPlayers={selectedPlayers}
+                        setSelectedPlayers={setSelectedPlayers}
+                        coin={coin}
+                        setCoin={setCoin}
+                    ></SelectedPlayers>
             }
         </div>
     );
